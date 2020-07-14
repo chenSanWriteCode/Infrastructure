@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Infrastructure
+﻿namespace Infrastructure
 {
     public static class ResultUtil
     {
@@ -19,12 +13,12 @@ namespace Infrastructure
         public static Result<T> AddNotNullData<T>(T data, string ExceptionMsg = ConstInfo.ERR_NotFound)
         {
             Result<T> result = new Result<T>();
-                if (data == null)
-                {
-                    result.AddErr(ExceptionMsg);
-                }
-                result.Data = data;
-                return result;
+            if (data == null)
+            {
+                result.AddErr(ExceptionMsg);
+            }
+            result.Data = data;
+            return result;
         }
         public static Result<T> CreateResult<T>(T data)
         {

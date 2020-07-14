@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Infrastructure
+﻿namespace Infrastructure
 {
     public static class ConstInfo
     {
+        #region Secret
+        public const string JWT_Secret = "旺财是条狗";
+        /// <summary>
+        /// jwt 有效期 单位小时
+        /// </summary>
+        public const double JWT_EffectiveInterval = 2;
+        #endregion
         #region ERR Message
-       
+
         public const string ERR_NotFound = "未找到";
         public const string ERR_NotFound_User = "未找到用户";
         public const string ERR_NotFound_Role = "未找到角色";
@@ -22,6 +24,8 @@ namespace Infrastructure
         public const string ERR_AlreadyHave_Right = "标题重复";
 
         public const string ERR_Null = "数据为空";
+
+        public const string ERR_Login = "用户名或密码错误";
         #endregion
     }
 }
